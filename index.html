@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Locker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Digital Locker</h1>
+    </header>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toast">
+        <div class="toast-content">
+            <div class="toast-indicator">
+                <svg viewBox="0 0 24 24" fill="none" class="success-icon" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10" fill="#22c55e" stroke="none"></circle>
+                    <path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Logged in successfully</span>
+            </div>
+            <button class="toast-close" id="close-toast">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- Dashboard Card -->
+        <section class="card">
+            <h2 class="card-title">Dashboard</h2>
+            <p class="card-subtitle">Welcome back, alice.</p>
+
+            <form class="upload-form" id="uploadForm">
+                <div class="file-input-wrapper">
+                    <input type="file" id="file" class="file-input" />
+                    <label for="file" class="file-label" id="fileLabel">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span id="fileName">Choose file to upload</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Upload</button>
+            </form>
+        </section>
+
+        <!-- File List Card -->
+        <section class="card files-card">
+            <p class="empty-state">No files uploaded yet.</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
